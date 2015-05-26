@@ -4,24 +4,74 @@ using namespace std;
 //	각 문제를 해결했을 때마다, 해당 시점에서 commit 할 것.
 //	commit 메시지는 자유롭게 해도 됩니다.
 
+/*
 int main()
 {
-	//	1번
-	//	0~99 범위의 임의의 정수 100개를 저장하고, 오름차순으로 정렬하여 출력하시오.
-	//	단, 모든 변수는 int형 포인터만 사용할 것.
-	
+	int main(){
+		int *arr = new int[100];
+		int temp;
+		srand(time(NULL));
+		for (int i = 0; i < 100; i++)
+		{
+			arr[i] = rand() % 100;
+		}
+		for (int i = 0; i < 100; i++)
+		{
+			for (int j = 0; j < 100; j++)
+			{
+				if (arr[i] < arr[j])
+				{
+					temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
+				}
+			}
 
-	//	2번
-	//	사람(Person)을 나타낼 클래스를 작성하시오. Person.h, Person.cpp 파일을 만들어 구현할 것.
-	//	모든 변수, 함수는 public으로 접근하게 할 것.
-	//	멤버변수
-	//		이름(name)			: string
-	//		나이(age)			: int
-	//		생사여부(isAlive)	: bool
-	//	멤버함수
-	//		말하기(talk)			: "Hello, world!"를 출력한다.
-	//		잠자기(sleep)		: "zzz"를 출력한다.
+		}
+		for (int i = 0; i < 100; i++){
+			cout << arr[i] << ' ';
+		}
+		cout << endl;
 
+		return 0;
+	}
+	*/
+/*#include "person.h"
+#include <string>
+#include <iostream>
+using namespace std;
+class person{
+public:
+	string name;
+	int age;
+	bool isalive;
+	void talk(){
+		cout << "hello world" << endl;
+	}
+	void sleep(){
+		cout << "zzz" << endl;
+	}
+};
+int main(){
+	person p1 = { "치섭", 20 };
+	int a;
+	cout << p1.name << ' ' << p1.age << endl;
+	cout << "1 - 살아남 ,  2 - 잠" << endl;
+	cin >> a;
+	if (a == 1)
+		p1.isalive = true;
+	else
+		p1.isalive = false;
+	if (p1.isalive == true)
+	{
+		p1.talk();
+	}
+	else if(p1.isalive == false)
+	{
+		p1.sleep();
+	}
+	return 0;
+}*/
 
 	//  3번
 	//	반 성적 관리 시스템
